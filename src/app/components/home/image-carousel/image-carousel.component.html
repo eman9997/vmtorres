@@ -1,0 +1,15 @@
+<div class="carousel-container">
+  <mat-card class="carousel-wrapper">
+    <div class="carousel-content">
+      <img [src]="getPrevImage()" (click)="prevImage()" alt="Previous Image" class="carousel-image prev-image">
+      <img [src]="getCurrentImage()" alt="Current Image" class="carousel-image current-image">
+      <img [src]="getNextImage()" (click)="nextImage()"  alt="Next Image" class="carousel-image next-image">
+      <button mat-icon-button (click)="prevImage()" class="carousel-arrow left-arrow">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <button mat-icon-button (click)="nextImage()" class="carousel-arrow right-arrow">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </mat-card>
+</div>

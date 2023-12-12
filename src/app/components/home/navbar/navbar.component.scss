@@ -1,0 +1,26 @@
+$primary: #77ACF1;
+$primary-alt: #040094;
+$secondary: #C0FEFC;
+$secondary-alt: #3EDBF0;
+$light: #fff;
+$dark: #000;
+
+mat-toolbar {
+  background: $primary;
+  color: $light;
+
+  a {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+.spacer {
+    flex: 1 1 auto;
+  }
+
+.logo{
+  width: 45px;
+  height: 70%;
+  padding-right: 10px;
+}

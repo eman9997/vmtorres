@@ -1,0 +1,22 @@
+<mat-toolbar>
+  <!-- <span class="photo" style="background-image: url('/assets/images/logo.png')"></span> -->
+  <img routerLink="" class="logo" src="/assets/images/logo.png" alt="V">
+    <span routerLink="">VMTorres</span>
+    <span class="spacer"></span>
+    <!-- Display for larger screens -->
+    <a mat-button *ngIf="!(isSmallScreen | async)" routerLink="">Home</a>
+    <a mat-button *ngIf="!(isSmallScreen | async)" routerLink="/inventory">Inventory</a>
+    <a mat-button *ngIf="!(isSmallScreen | async)" routerLink="/bundles">Bundles</a>
+    <a mat-button *ngIf="!(isSmallScreen | async)" routerLink="/contact">Contact Us</a>
+  
+    <!-- Hamburger menu for smaller screens -->
+    <button mat-icon-button *ngIf="(isSmallScreen | async)" [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a mat-menu-item routerLink="/">Home</a>
+      <a mat-menu-item routerLink="/inventory">Inventory</a>
+      <a mat-menu-item routerLink="/bundles">Contact Us</a>
+      <a mat-menu-item routerLink="/contact">Contact Us</a>
+    </mat-menu>
+  </mat-toolbar>

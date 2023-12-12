@@ -1,0 +1,183 @@
+$primary: #77ACF1;
+$primary-alt: #040094;
+$secondary: #C0FEFC;
+$secondary-alt: #3EDBF0;
+$light: #fff;
+$dark: #000;
+
+.full-container {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.main-title{
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  padding: 40px;
+  // margin-bottom: 1rem;
+}
+
+
+#confetti {
+  position: relative;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+
+.inventory-graphic-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+
+  img {
+    height: 100vh;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .inventory-button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    cursor: pointer;
+    background: $light;
+    color: $primary;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 1.6rem;
+    border: 3px solid $primary;
+    border-bottom: 5px solid $primary;
+    border-right: 5px solid $primary;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+    box-shadow: 10px 10px 34px 3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 34px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 34px 3px rgba(0,0,0,0.75);
+
+    &:hover {
+      border-bottom: 3px solid $primary;
+      border-right: 3px solid $primary;
+      box-shadow: 10px 10px 34px -22px rgba(0,0,0,0.75);
+      -webkit-box-shadow: 10px 10px 34px -22px rgba(0,0,0,0.75);
+      -moz-box-shadow: 10px 10px 34px -22px rgba(0,0,0,0.75);
+    }
+  }
+}
+
+#envelope {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 80%;
+  height: 300px;
+  margin: 0 2.5rem;
+  padding: 1rem;
+  background: rgba($secondary, .5);
+  border-radius: .04rem;
+  font-family: cormorant;
+  
+  #envelope-header {
+    display: flex;
+    justify-content: space-between;
+    
+    #envelope-header-text {
+      font-size: 1.3rem;
+      width: 20rem;
+    }
+  }
+
+  #stamp {
+    position: relative;
+
+    #stamp-logo {
+      width: 5rem;
+    }
+
+    .stamp-line {
+      &:nth-child(2) {
+        position: absolute;
+        top: 1.6rem;
+        left: .8rem;
+        right: .8rem;
+        height: .1rem;
+        background: rgba($dark, .6);
+      }
+      &:nth-child(3) {
+        position: absolute;
+        top: 2.5rem;
+        left: 0rem;
+        right: 0rem;
+        height: .1rem;
+        background: rgba($dark, .6);
+      }
+      &:nth-child(4) {
+        position: absolute;
+        top: 3.4rem;
+        left: .8rem;
+        right: .8rem;
+        height: .1rem;
+        background: rgba($dark, .6);
+      }
+    }
+  }
+
+  #envelope-body {
+    display: flex;
+    justify-content: center;
+
+    #envelope-link {
+      padding: 2rem;
+      cursor: pointer;
+      background: transparent;
+      font-size: 1.1rem;
+      border: 3px solid $primary;
+      border-bottom: 5px solid $primary;
+      border-right: 5px solid $primary;
+      transition-duration: .4s;
+      transition-timing-function: ease;
+
+      &:hover {
+        border-bottom: 3px solid $primary;
+        border-right: 3px solid $primary;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-title {
+    padding: 30px 20px 0 20px;
+    line-height: 3rem;
+  }
+
+  #envelope {
+    height: 250px;
+
+    #envelope-header {
+      justify-content: center;
+
+      #envelope-header-text {
+        margin-bottom: 1.8rem;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        width: 100%;
+      }
+    }
+
+    #stamp {
+      display: none;
+    }
+  }
+}
