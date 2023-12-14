@@ -4,7 +4,7 @@ const app = express();
 
 // Serve static files
 // app.use(express.static(__dirname + 'vmtorres'));
-app.use(express.static(path.join(__dirname, '/vmtorres')));
+//app.use(express.static(path.join(__dirname, '/vmtorres')));
 
 app.get('/api', function(req, res) {
   res.send('API works');
@@ -12,7 +12,7 @@ app.get('/api', function(req, res) {
 
 // Send all requests to index.html
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/vmtorres/index.html'));
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 // Default Heroku PORT
