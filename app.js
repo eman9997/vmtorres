@@ -10,8 +10,8 @@ app.use(express.static(__dirname + '/vmtorres'));
 // });
 
 // Send all requests to index.html
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname + '/vmtorres/index.html'));
+app.get('*', function(req, res) {
+  res.sendFile(path.resolve(__dirname + '/vmtorres/index.html'));
 });
 
 // Default Heroku PORT
