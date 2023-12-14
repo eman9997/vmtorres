@@ -12,7 +12,7 @@ app.get('/api', function(req, res) {
 
 // Send all requests to index.html
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname + 'index.html'));
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 // Default Heroku PORT
